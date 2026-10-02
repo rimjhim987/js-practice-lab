@@ -1,0 +1,49 @@
+body{
+  background:#f5f7fb;
+  font-family:sans-serif;
+}
+
+.expense-app{
+  width:420px;
+  margin:30px auto;
+  background:white;
+  padding:25px;
+  border-radius:15px;
+}
+
+.summary{
+  display:flex;
+  gap:15px;
+  margin:20px 0;
+}
+
+.card{
+  flex:1;
+  background:#6366f1;
+  color:white;
+  padding:15px;
+  border-radius:10px;
+}
+
+.form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.form input,
+.form select{
+  padding:12px;
+}
+
+.form button{
+  padding:12px;
+  background:#16a34a;
+  color:white;
+  border:none;
+  border-radius:8px;
+}
+
+.transaction-list{
+  margin-top:20px;
+}

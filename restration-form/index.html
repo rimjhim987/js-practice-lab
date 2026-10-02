@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration-form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a, #7c3aed);
+            color: #1f2937;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 22px;
+            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.25);
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0 0 30px;
+            padding-top: 10px;
+            color: #111827;
+            font-size: 2.2rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            align-items: center;
+        }
+
+        input,
+        select,
+        button {
+            font: inherit;
+        }
+
+        input,
+        select {
+            width: min(100%, 420px);
+            padding: 14px 16px;
+            border: 1px solid #d1d5db;
+            border-radius: 12px;
+            background: #f9fafb;
+            color: #111827;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12);
+            background: #fff;
+        }
+
+        input[type="radio"] {
+            width: auto;
+            margin: 0 8px 0 0;
+            accent-color: #4f46e5;
+        }
+
+        .gender-wrap {
+            width: min(100%, 420px);
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 8px 0;
+            color: #374151;
+            font-weight: 600;
+        }
+
+        .gender-wrap label {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .terms-wrap {
+            width: min(100%, 420px);
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 8px 0;
+            color: #374151;
+            font-weight: 600;
+        }
+        .gender-wrap label {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        select {
+            width: min(100%, 130px);
+        }
+
+        .dob-row {
+            width: min(100%, 420px);
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            margin-top: 10px;
+            width: min(100%, 220px);
+            height: 48px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            cursor: pointer;
+            box-shadow: 0 12px 28px rgba(79, 70, 229, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 16px 30px rgba(79, 70, 229, 0.35);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 92%;
+                padding: 22px 16px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            input,
+            select,
+            .gender-wrap,
+            .dob-row {
+                width: 100%;
+            }
+
+            .dob-row {
+                flex-direction: column;
+            }
+
+            select {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> Registration form </h1>
+        <form onsubmit="return validationForm()">
+            <input type="text" name="name" placeholder="Enter your name" id="name">
+
+            <input type="email" name="email" placeholder="Enter your email" id="email">
+
+            <input type="password" name="password" placeholder="enter your password" id="password">
+
+            <div class="gender-wrap">
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="other"> Other</label>
+            </div>
+
+            <input type="text" name="phone" placeholder="Enter your phone number" id="phone">
+
+            <input type="text" name="address" placeholder="Enter your address" id="address">
+
+            <div class="dob-row">
+                <select name="date" id="date">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <select name="month" id="month">
+                    <option value="january">January</option>
+                    <option value="february">February</option>
+                    <option value="march">March</option>
+                    <option value="april">April</option> 
+                    <option value="may">May</option>
+                    <option value="june">June</option>
+                    <option value="july">July</option>
+                    <option value="august">August</option>  
+                    <option value="september">September</option>
+                    <option value="october">October</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
+                </select>
+                <select name="year" id="year">
+                    <option value="2000">2000</option>
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
+                    <option value="2003">2003</option>
+                    <option value="2004">2004</option>
+                    <option value="2005">2005</option>
+                    <option value="2006">2006</option>
+                    <option value="2007">2007</option>
+                    <option value="2008">2008</option>
+                    <option value="2009">2009</option>
+                    <option value="2010">2010</option>
+                    <option value="2011">2011</option>
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                </select>
+                <label><input type="checkbox" name="language" value="english" id="terms">English</label>
+                <label><input type="checkbox" name="language" value="hindi" id="terms">Hindi</label>
+            </div>
+
+            <button type="submit" class="btn">submit form</button>
+
+        </form>
+
+    </div>
+    <script>
+        function validationForm() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const gender = document.querySelector('input[name="gender"]:checked');
+            const phone = document.getElementById('phone').value.trim();
+            const address = document.getElementById('address').value.trim();
+
+            if (name.length < 6) {
+                alert("Name should not be less than 6");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password should not be less than 6");
+                return false;
+            }
+
+            if (!/^[A-Za-z\s]+$/.test(name)) {
+                alert("Name should contain only alphabets and spaces");
+                return false;
+            }
+
+            if (!email.includes('@')) {
+                alert("Please enter a valid email");
+                return false;
+            }
+
+            if (!gender) {
+                alert("Please select your gender");
+                return false;
+            }
+
+            if (phone.length < 10) {
+                alert("Phone number should be at least 10 digits");
+                return false;
+            }
+
+            if (address.length < 5) {
+                alert("Address should not be too short");
+                return false;
+            }
+
+            alert("Registration successful");
+            return true;
+        }
+    </script>
+</body>
+</html>

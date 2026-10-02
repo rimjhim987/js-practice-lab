@@ -1,0 +1,42 @@
+body{
+  background:#1e293b;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  color:white;
+  font-family:sans-serif;
+}
+
+.quiz-box{
+  width:450px;
+  background:#334155;
+  padding:25px;
+  border-radius:15px;
+}
+
+.options{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin:20px 0;
+}
+
+.option,
+.next-btn{
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.option{
+  background:white;
+  color:black;
+}
+
+.next-btn{
+  width:100%;
+  background:#22c55e;
+  color:white;
+}
